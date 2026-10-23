@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/submit", "destination": "https://a-a-lp-form.vercel.app/submit" }
+  ]
+}
