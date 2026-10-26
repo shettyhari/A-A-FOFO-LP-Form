@@ -27,6 +27,7 @@
       --muted: #6E5A50;
       --line: #E6D9C8;
       --error: #B3261E;
+      --orange: #F25A14;
       --radius: 14px;
     }
     * { box-sizing: border-box; }
@@ -75,16 +76,25 @@
     .sa-hero__img { position: absolute; top: 0; left: -171.17%; width: 301.26%; max-width: none; height: auto; }
     .sa-hero__media::after {
       content: "";
-      position: absolute; inset: auto 0 0 0; height: 45%;
+      position: absolute; inset: auto 0 0 0; height: 60%;
       background: linear-gradient(to bottom, rgba(58, 11, 5, 0), var(--maroon-deep));
       pointer-events: none;
     }
-    .sa-hero__overlay { position: relative; z-index: 1; margin-top: -54px; padding: 0 16px 14px; text-align: center; }
+    .sa-hero__overlay { position: relative; z-index: 1; margin-top: -120px; padding: 0 14px 16px; text-align: center; }
     .sa-hero__eyebrow {
-      margin: 0; color: var(--gold); font-size: 11px; font-weight: 600;
-      letter-spacing: .16em; text-transform: uppercase;
+      margin: 0; color: var(--gold); font-size: 10.5px; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase;
     }
-    .sa-hero__caption { margin: 4px 0 0; color: var(--cream); font-size: 14px; }
+    .sa-hero__headline {
+      margin: 6px 0 0; color: #fff; font-size: 19px; font-weight: 600; line-height: 1.15;
+      text-transform: uppercase; letter-spacing: .01em;
+    }
+    .sa-hero__headline strong { display: block; font-size: clamp(18px, 5.8vw, 26px); font-weight: 600; margin-top: 2px; white-space: nowrap; }
+    .sa-hero__tagline {
+      margin: 12px 0 0; padding: 10px 12px; border-radius: 10px;
+      background: var(--orange); color: #fff; font-size: 14px; line-height: 1.4;
+    }
+    .sa-hero__caption { margin: 12px 0 0; color: #E9D7C3; font-size: 12px; }
     .sa-nowrap { white-space: nowrap; }
 
     .sa-hero__stats { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(232, 181, 106, .25); }
@@ -95,14 +105,11 @@
     .sa-stat__value sup { font-size: 14px; }
     .sa-stat__sub { color: var(--cream); font-size: 13px; margin-top: 2px; }
 
-    .sa-hero__support {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-      padding: 14px 12px 16px; border-top: 1px solid rgba(232, 181, 106, .25);
-    }
+    .sa-hero__support { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
     .sa-support {
-      display: flex; align-items: center; gap: 8px;
-      padding: 9px 10px; border: 1px solid rgba(232, 181, 106, .35); border-radius: 10px;
-      color: var(--cream); font-size: 12px; line-height: 1.35;
+      display: flex; align-items: center; gap: 8px; text-align: left;
+      padding: 8px 10px; border: 1px solid rgba(255, 255, 255, .55); border-radius: 8px;
+      color: #fff; font-size: 12px; line-height: 1.35;
     }
     .sa-support svg { flex: 0 0 22px; width: 22px; height: 22px; color: var(--gold); }
 
@@ -198,7 +205,19 @@
               <img class="sa-hero__img" src="assets/ambassador-shruti.webp" width="1672" height="941" alt="Shruti Haasan, Brand Ambassador, Adhira &amp; Appa Coffee">
             </div>
             <div class="sa-hero__overlay">
-              <p class="sa-hero__eyebrow"><span class="sa-nowrap">Franchise Owned</span> · <span class="sa-nowrap">Franchise Operated</span></p>
+              <p class="sa-hero__eyebrow">FOFO Model | <span class="sa-nowrap">Franchise Owned,</span> <span class="sa-nowrap">Franchise Operated</span></p>
+              <p class="sa-hero__headline">Own &amp; Operate Your<strong>Premium Cafe Franchise</strong></p>
+              <p class="sa-hero__tagline">Build your café business with a trusted brand and structured franchise support.</p>
+              <div class="sa-hero__support">
+                <div class="sa-support">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9h18v1.5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1-5 0V9"/><path d="M5 12.5V20h14v-7.5"/><path d="M10 20v-4h4v4"/></svg>
+                  <span>Outlet Setup &amp; Training Support</span>
+                </div>
+                <div class="sa-support">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h11v9H2z"/><path d="M13 10h4l3 3v3h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+                  <span>Supply Chain &amp; Marketing Support</span>
+                </div>
+              </div>
               <p class="sa-hero__caption">Shruti Haasan · Brand Ambassador</p>
             </div>
             <div class="sa-hero__stats">
@@ -213,21 +232,11 @@
                 <span class="sa-stat__sub">in 12 states</span>
               </div>
             </div>
-            <div class="sa-hero__support">
-              <div class="sa-support">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9h18v1.5a2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1-5 0V9"/><path d="M5 12.5V20h14v-7.5"/><path d="M10 20v-4h4v4"/></svg>
-                <span>Outlet Setup &amp; Training Support</span>
-              </div>
-              <div class="sa-support">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h11v9H2z"/><path d="M13 10h4l3 3v3h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
-                <span>Supply Chain &amp; Marketing Support</span>
-              </div>
-            </div>
           </div>
           <p class="sa-hero__note">*Disclaimer: Returns are indicative and not guaranteed. Investments are subject to market and business risks. Please read all offer documents carefully before investing. Figures are indicative and vary by city, site and format.</p>
 
-          <h1 class="sa__step-title" id="step1Title">Own &amp; Operate Your Premium Cafe Franchise</h1>
-          <p class="sa__step-intro">Build your café business with a trusted brand and structured franchise support. Fill in your details and an Adhira &amp; Appa franchise advisor will reach out within 24 hours.</p>
+          <h1 class="sa__step-title" id="step1Title">Apply for an Adhira &amp; Appa Cafe Franchise</h1>
+          <p class="sa__step-intro">Fill in your details and an Adhira &amp; Appa franchise advisor will reach out within 24 hours.</p>
 
           <div class="sa__field">
             <label for="name">Full name</label>
